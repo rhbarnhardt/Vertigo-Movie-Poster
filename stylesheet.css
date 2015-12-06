@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background-color: rgba(185,45,12,1);
+}
+img {
+    max-width: 100%;
+}
+
+
+#base{
+display:block;
+background-image: url(images/base.png);
+background-repeat: no-repeat;
+position:absolute;
+width:100%;
+height:1006px;
+left:25%;
+z-index: 1;
+}
+
+#title{
+background-image: url(images/title.png);
+background-repeat: no-repeat;
+position:relative;
+width:401px;
+height:57px;
+left:28%;
+top:875px;
+animation:title 7s linear;    
+z-index: 2;
+}
+
+#whorl{
+background-image: url(images/whorl.png);
+background-repeat:no-repeat;
+position:relative;
+width:546px;
+height:577px;
+left:29%;
+top:225px;
+animation: spin 8s infinite linear;
+z-index: 3;
+
+}
+
+#dude{
+background-image: url(images/dude.png);
+background-repeat: no-repeat;
+position:relative;
+width: 164px;
+height:206px;
+left:46.3%;
+top:-230px;
+animation: spinDude 10s infinite linear;
+z-index: 4;
+}
+
+@keyframes spin{
+    0%{transform:rotateZ(0deg) scale(.9)}
+    50%{transform:rotateZ(180deg) scale(1)}
+    100%{transform:rotateZ(360deg) scale(.9)}
+
+}
+@keyframes spinDude{
+    0%{transform:rotateZ(0deg) scale(1.5)}
+    100%{transform:rotateZ(-360deg) scale(-2)}
+
+}
+
+@keyframes title{
+    0%{transform:rotateX(0deg) rotateZ(0deg) 
+scale(0)
+;}
+    45%{transform:rotateX(180deg) rotateZ(180deg) scale(1)
+;}
+    80%{ transform:rotateX(0deg) rotateZ(0deg) scale(1)}
+    
+    90%{ transform:rotateX(0deg) rotateZ(0deg) scale(1)}
+    
+    100%{ transform:rotateX(0deg) rotateZ(0deg) scale(1)}
+
+}
